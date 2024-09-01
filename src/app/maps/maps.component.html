@@ -1,0 +1,7 @@
+
+<div class="main-container">
+    <google-map height="500px" width="700px" (mapClick)="location($event)">
+        <map-marker *ngFor="let marker of markers"  [position]="marker.position" [label]="marker.label"></map-marker>
+        <map-marker (mapClick)="location($event)" [position]="info.position" [label]="info.label"></map-marker>
+    </google-map>       
+</div>
