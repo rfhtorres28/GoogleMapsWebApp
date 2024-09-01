@@ -1,7 +1,19 @@
 
 <div class="main-container">
-    <google-map height="500px" width="700px" (mapClick)="location($event)">
+  <div class="map-container"> 
+    <google-map [center]="centerTest" [height]="'500px'" [width]="'700px'"  (mapClick)="location($event)" [options]="options" >
         <map-marker *ngFor="let marker of markers"  [position]="marker.position" [label]="marker.label"></map-marker>
-        <map-marker (mapClick)="location($event)" [position]="info.position" [label]="info.label"></map-marker>
-    </google-map>       
+        <map-marker (mapClick)="location($event)" [position]="info.position"  [label]="info.label" ></map-marker>
+        <map-marker [position]="centerTest"  [label]="testCoordinates.label" ></map-marker>
+    </google-map>      
+ </div> 
+ <div class="search-container">
+    <h4>Enter the coordinates</h4>
+    <div class="mb-3">
+        <input type="text" [(ngModel)]="inputLatitude" (ngModelChange)="onCoordinatesChange()" class="form-control" placeholder="Enter the latitude">
+    </div>
+    <div class="mb-3">
+        <input type="text" [(ngModel)]="inputLongitude" (ngModelChange)="onCoordinatesChange()" class="form-control" placeholder="Enter the longtitude">
+    </div>
+ </div>
 </div>

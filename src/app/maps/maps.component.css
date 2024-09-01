@@ -4,4 +4,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    width: 60vw;
+    border-radius: 30px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    height: 90vh;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-control {
+    width: 200px;
+}
+h4 {
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
